@@ -22,17 +22,17 @@ VOID ManagerRun(LPCSTR exe,LPCSTR param,INT nShow=SW_SHOW)
  	CloseHandle(ShExecInfo.hProcess);
  	return;
 }
-
+//ä»¥ä¸Šç¨‹åºç”¨äºè·å–ç®¡ç†å‘˜æƒé™
 
 int main(int argc,char *argv[])
 {
-    if(argc == 1) //³õ´ÎÔËĞĞ£¬¼´Ë«»÷EXE
+    if(argc == 1) //åˆæ¬¡è¿è¡Œï¼Œå³åŒå‡»EXE
     {
         ShowWindow(GetConsoleWindow(),SW_HIDE);
         ManagerRun(argv[0],"2");
         return 1;
     }
-	else if(argc == 2) //ÔÙ´ÎÔËĞĞ,¼´ÉÏÃæÄÇ¸öManagerRun
+	else if(argc == 2) //å†æ¬¡è¿è¡Œ,å³ä¸Šé¢é‚£ä¸ªManagerRun
     {
     	char input[1024];
     
@@ -44,14 +44,14 @@ int main(int argc,char *argv[])
     
     	system("shutdown -s -t 30");
     
-    	printf("ËµÁË²»Ìı£¬·ÇµÃ×÷ËÀ£¬ÕâÏÂºÃÀ²:D\n");
+    	printf("è¯´äº†ä¸å¬ï¼Œéå¾—ä½œæ­»ï¼Œè¿™ä¸‹å¥½å•¦:D\n");
 
 	again: 
-		printf("ÕâÀïÊÇPioneer,´ËµçÄÔ½«ÔÚÈıÊ®ÃëÄÚ¹Ø»ú£¬ÊäÈë¡°ÎÒ´íÁË¡±À´È¡Ïû¹Ø»ú¡£\n");
+		printf("è¿™é‡Œæ˜¯Pioneer,æ­¤ç”µè„‘å°†åœ¨ä¸‰åç§’å†…å…³æœºï¼Œè¾“å…¥â€œæˆ‘é”™äº†â€æ¥å–æ¶ˆå…³æœºã€‚\n");
 	
 		scanf("%s",&input);
 	
-		if(0== strcmp(input,"ÎÒ´íÁË"))
+		if(0== strcmp(input,"æˆ‘é”™äº†"))
 		{
 			system("shutdown -a");
 		}
